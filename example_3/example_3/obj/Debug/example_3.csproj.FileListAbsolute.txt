@@ -1,0 +1,7 @@
+C:\Users\laptop\source\repos\example_3\example_3\bin\Debug\example_3.exe.config
+C:\Users\laptop\source\repos\example_3\example_3\bin\Debug\example_3.exe
+C:\Users\laptop\source\repos\example_3\example_3\bin\Debug\example_3.pdb
+C:\Users\laptop\source\repos\example_3\example_3\obj\Debug\example_3.csprojAssemblyReference.cache
+C:\Users\laptop\source\repos\example_3\example_3\obj\Debug\example_3.csproj.CoreCompileInputs.cache
+C:\Users\laptop\source\repos\example_3\example_3\obj\Debug\example_3.exe
+C:\Users\laptop\source\repos\example_3\example_3\obj\Debug\example_3.pdb
