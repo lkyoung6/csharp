@@ -9,7 +9,7 @@ namespace Example_14
     public class Stock
     {
         public decimal CurrentPrice { get; set; } = 123;
-        public int Maximum { get; } = 999;
+        public int Maximum { get; set; } = 999;
     }
     //class Program
     //{
@@ -17,6 +17,8 @@ namespace Example_14
     //    {
     //        Stock stock = new Stock();
     //        Console.WriteLine($"{stock.CurrentPrice} {stock.Maximum}");
+    //        stock.Maximum = 300;
+    //        Console.WriteLine($"{stock.Maximum}");
 
     //    }
     //}

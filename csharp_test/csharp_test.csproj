@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="chapter3\18_StaticConstructors_01.cs" />
     <Compile Include="chapter3\example1.cs" />
     <Compile Include="chapter3\example10.cs" />
     <Compile Include="chapter3\example11.cs" />

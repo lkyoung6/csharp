@@ -8,8 +8,8 @@ namespace Example_11
 {
     public class Stock
     {
-        decimal currentPrice;
-        public decimal CurrentPrice
+        private decimal currentPrice;
+        decimal CurrentPrice
         {
             get { return currentPrice; }
             set { currentPrice = value; }

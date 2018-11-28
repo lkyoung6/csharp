@@ -27,6 +27,7 @@ namespace Example_15
     //    {
     //        Foo foo = new Foo();
     //        foo.Round(4.535m);
+    //        //foo.X = 5.35m;// private이 set 앞에 있어 접근 불가
     //        Console.WriteLine($"{foo.X}");
     //    }
     //}
