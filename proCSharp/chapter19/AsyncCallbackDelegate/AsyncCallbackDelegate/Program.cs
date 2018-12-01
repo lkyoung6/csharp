@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -18,10 +19,11 @@ namespace AsyncCallbackDelegate
             Console.WriteLine("Main() invoked on thread {0}.", Thread.CurrentThread.ManagedThreadId);
 
             BinaryOp b = new BinaryOp(Add);
-            IAsyncResult ar = b.BeginInvoke(10, 10, new AsyncCallback(AddComplete), null);
+            IAsyncResult ar = b.BeginInvoke(10, 10, new AsyncCallback(AddComplete), "Main() thanks you for adding these numbers.");
 
             while (!isDone)
             {
+                Thread.Sleep(1000);
                 Console.WriteLine("Working.....");
             }
             
@@ -37,6 +39,13 @@ namespace AsyncCallbackDelegate
         {
             Console.WriteLine("AddComplete() invoked on thread {0}.", Thread.CurrentThread.ManagedThreadId);
             Console.WriteLine("Your addition is complete");
+
+            AsyncResult ar = (AsyncResult)iar;
+            BinaryOp b = (BinaryOp)ar.AsyncDelegate;
+            Console.WriteLine("10 + 10 is {0}.", b.EndInvoke(iar));
+
+            string msg = (string)iar.AsyncState;
+            Console.WriteLine(msg);
             isDone = true;
         }
     }
