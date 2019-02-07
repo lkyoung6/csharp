@@ -158,16 +158,9 @@ namespace UpdateAndUploadLibrary
         {
             try
             {
-                //string ftpUri = ConfigurationManager.AppSettings["FtpUri"];
-                //string fileName = string.Format("{0}{1}", targetVersion, ".txt");
-                //string requestUriString = string.Format("{0}{1}", ftpUri, fileName);
-
-                //20190207 테스트 목적으로 작성
-                //IFakeWebClient fakeWebClient = new FakeWebClient();
-                //byte[] bytes = fakeWebClient.DownloadData();
 
                 byte[] bytes = this.WebClient.DownloadData(requestUriString);
-                //byte[] bytes = this.ExtractBytesFromFtp(requestUriString);
+
                 string contents = Encoding.UTF8.GetString(bytes);
                 string[] contentsLines = contents.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
 

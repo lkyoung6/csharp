@@ -6,9 +6,9 @@ using System.Text;
 
 namespace UpdateAndUploadLibrary
 {
-    public class FakeWebClient : WebClient, IFakeWebClient
+    public class FakeWebClient : WebClient
     {
-        public new virtual byte[] DownloadData(string address)
+        public new byte[] DownloadData(string address)
         {
             string fileConstentOnServer=  @"1.0.0.109
                                            BXLLIB.dll || 3509475351
@@ -37,7 +37,7 @@ namespace UpdateAndUploadLibrary
                                            stdole.dll || 2984433064
                                            System.Data.SQLite.dll || 3155191852
                                            TSCLIBx86.dll || 3861450121";
-            
+            fileConstentOnServer = string.Empty;
             byte[] bytes = Encoding.UTF8.GetBytes(fileConstentOnServer);
 
             return bytes;
